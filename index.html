@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biastorepyy | Tu estilo, tu actitud - Moda Urbana</title>
+    <meta name="description"
+        content="Biastorepyy: La mejor tienda de ropa urbana y deportiva en Paraguay. Prendas exclusivas, envíos a todo el país y calidad premium.">
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="redesign-v2">
+
+
+    <!-- Navigation (Restructured) -->
+    <header class="site-header">
+        <div class="container header-grid">
+            <nav class="header-left">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#productos">Catálogo</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-center">
+                <a href="#" class="brand-logo">BIASTOREPYY</a>
+            </div>
+            <div class="header-right">
+                <button class="icon-btn search-trigger" id="searchTrigger"><i data-lucide="search"></i></button>
+                <button class="icon-btn mobile-menu-btn" id="menuToggle"><i data-lucide="menu"></i></button>
+                <button class="icon-btn cart-btn" id="cartTrigger">
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- New Hero Section (Split Panel) -->
+    <section class="hero-redesign">
+        <div class="hero-split-images">
+            <div class="hero-img-panel"><img src="catalogo bias/abrigo1.png" alt="Hero 1"></div>
+            <div class="hero-img-panel"><img src="catalogo bias/abrigo2.png" alt="Hero 2"></div>
+        </div>
+        <div class="hero-content-center">
+            <div class="hero-text-overlay">
+                <h1 class="hero-title">ESTILO<br>VIBRA<br>REFLEJA</h1>
+                <p class="hero-subtitle">Esencia Streetwear Minimalista</p>
+                <a href="#productos" class="btn-shop-now">COMPRAR AHORA</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manifesto Section -->
+    <section class="manifesto-section reveal">
+        <div class="container center-text">
+            <h2 class="manifesto-title">DISEÑADO PARA DISRUMPIR</h2>
+            <p class="manifesto-text">
+                BÁSICOS DE LUJO PARA EL DISRUPTOR MODERNO. PIEZAS CONFECCIONADAS CON PRECISIÓN QUE ROMPEN LA CONVENCIÓN
+                Y REDEFINEN LA PRESENCIA. ESTO NO ES SOLO MODA—ES UNA DECLARACIÓN.
+            </p>
+        </div>
+    </section>
+
+    <!-- Product Catalog Section -->
+    <section class="section catalog reveal" id="productos">
+        <div class="container">
+            <div class="section-header-minimal center">
+                <p class="mono-accent">Colección Completa</p>
+                <h2 class="bold-sans">Nuestras Prendas</h2>
+                <div class="header-actions-extra">
+                    <a href="CATALGO OFICIAL BIASTOREPYY.pdf" download class="btn-outline-minimal small">
+                        <i data-lucide="download"></i> Descargar Catálogo PDF
+                    </a>
+                </div>
+            </div>
+
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">TODOS</button>
+                <button class="filter-btn" data-filter="abrigos">ABRIGOS</button>
+                <button class="filter-btn" data-filter="pantalones">PANTALONES</button>
+                <button class="filter-btn" data-filter="remeras">REMERAS</button>
+                <button class="filter-btn" data-filter="sudaderas">SUDADERAS</button>
+                <button class="filter-btn" data-filter="jeans">VAQUEROS</button>
+                <button class="filter-btn" data-filter="shorts">SHORTS</button>
+            </div>
+
+            <div class="p-catalog-grid redesign-grid">
+                <!-- Abrigos -->
+                <div class="p-panel-card" data-category="abrigos">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/abrigo1.png" alt="Abrigo Tech Black">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Abrigo Tech Black</h3>
+                        <p class="price-strike">185.000 Gs</p>
+                        <p class="price-current">145.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Abrigo Tech Black', '145.000 Gs', 'catalogo bias/abrigo1.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-panel-card" data-category="abrigos">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/abrigo2.png" alt="Abrigo Reflective">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Abrigo Reflective</h3>
+                        <p class="price-strike">210.000 Gs</p>
+                        <p class="price-current">160.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Abrigo Reflective', '160.000 Gs', 'catalogo bias/abrigo2.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-panel-card" data-category="abrigos">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/abrigo3.png" alt="Abrigo Heart Icon">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Abrigo Heart Icon</h3>
+                        <p class="price-strike">195.000 Gs</p>
+                        <p class="price-current">155.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Abrigo Heart Icon', '155.000 Gs', 'catalogo bias/abrigo3.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-panel-card" data-category="abrigos">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/abrigoi.png" alt="Abrigo Minimalist">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Abrigo Minimalist</h3>
+                        <p class="price-strike">180.000 Gs</p>
+                        <p class="price-current">140.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Abrigo Minimalist', '140.000 Gs', 'catalogo bias/abrigoi.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Vaqueros -->
+                <div class="p-panel-card" data-category="jeans">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/jeen1.png" alt="Baggy Jean Classic">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Baggy Jean Classic</h3>
+                        <p class="price-strike">165.000 Gs</p>
+                        <p class="price-current">130.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Baggy Jean Classic', '130.000 Gs', 'catalogo bias/jeen1.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-panel-card" data-category="jeans">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/jeen2.png" alt="Destroyed Jean Tech">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Destroyed Jean Tech</h3>
+                        <p class="price-strike">175.000 Gs</p>
+                        <p class="price-current">140.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Destroyed Jean Tech', '140.000 Gs', 'catalogo bias/jeen2.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-panel-card" data-category="jeans">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/jeen3.png" alt="Light Blue Loose">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Light Blue Loose</h3>
+                        <p class="price-strike">160.000 Gs</p>
+                        <p class="price-current">125.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Light Blue Loose', '125.000 Gs', 'catalogo bias/jeen3.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pantalones -->
+                <div class="p-panel-card" data-category="pantalones">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/pantalon.png" alt="Cargo Pant Black">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Cargo Pant Black</h3>
+                        <p class="price-strike">150.000 Gs</p>
+                        <p class="price-current">120.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Cargo Pant Black', '120.000 Gs', 'catalogo bias/pantalon.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-panel-card" data-category="pantalones">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/pantalon2.png" alt="Jogger Tech Line">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Jogger Tech Line</h3>
+                        <p class="price-strike">145.000 Gs</p>
+                        <p class="price-current">115.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Jogger Tech Line', '115.000 Gs', 'catalogo bias/pantalon2.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-panel-card" data-category="pantalones">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/pantalon3.png" alt="Wide Leg Jogger">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Wide Leg Jogger</h3>
+                        <p class="price-strike">155.000 Gs</p>
+                        <p class="price-current">125.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Wide Leg Jogger', '125.000 Gs', 'catalogo bias/pantalon3.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-panel-card" data-category="pantalones">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/pantalon4.png" alt="Oversize Sweatpant">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Oversize Sweatpant</h3>
+                        <p class="price-strike">140.000 Gs</p>
+                        <p class="price-current">110.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Oversize Sweatpant', '110.000 Gs', 'catalogo bias/pantalon4.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Remeras -->
+                <div class="p-panel-card" data-category="remeras">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/remera1.png" alt="Remera Racing Dev">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Remera Racing Dev</h3>
+                        <p class="price-strike">85.000 Gs</p>
+                        <p class="price-current">65.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Remera Racing Dev', '65.000 Gs', 'catalogo bias/remera1.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-panel-card" data-category="remeras">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/remera2.png" alt="Remera Oversize Navy">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Remera Oversize Navy</h3>
+                        <p class="price-strike">80.000 Gs</p>
+                        <p class="price-current">60.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Remera Oversize Navy', '60.000 Gs', 'catalogo bias/remera2.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-panel-card" data-category="remeras">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/remera3.png" alt="Remera Graphic X">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Remera Graphic X</h3>
+                        <p class="price-strike">85.000 Gs</p>
+                        <p class="price-current">65.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Remera Graphic X', '65.000 Gs', 'catalogo bias/remera3.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-panel-card" data-category="remeras">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/remera4.png" alt="Remera Multi Logo">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Remera Multi Logo</h3>
+                        <p class="price-strike">80.000 Gs</p>
+                        <p class="price-current">60.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Remera Multi Logo', '60.000 Gs', 'catalogo bias/remera4.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Shorts -->
+                <div class="p-panel-card" data-category="shorts">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/short1.png" alt="Short Baggy Nylon">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Short Baggy Nylon</h3>
+                        <p class="price-strike">110.000 Gs</p>
+                        <p class="price-current">85.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Short Baggy Nylon', '85.000 Gs', 'catalogo bias/short1.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sudaderas -->
+                <div class="p-panel-card" data-category="sudaderas">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/sudadera1.png" alt="Sudadera Basic Green">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Sudadera Basic Green</h3>
+                        <p class="price-strike">135.000 Gs</p>
+                        <p class="price-current">105.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Sudadera Basic Green', '105.000 Gs', 'catalogo bias/sudadera1.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-panel-card" data-category="sudaderas">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/sudadera2.png" alt="Sudadera Boxy Brown">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Sudadera Boxy Brown</h3>
+                        <p class="price-strike">140.000 Gs</p>
+                        <p class="price-current">110.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Sudadera Boxy Brown', '110.000 Gs', 'catalogo bias/sudadera2.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-panel-card" data-category="sudaderas">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/sudadera3.png" alt="Sudadera Grey Basic">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Sudadera Grey Basic</h3>
+                        <p class="price-strike">130.000 Gs</p>
+                        <p class="price-current">100.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Sudadera Grey Basic', '100.000 Gs', 'catalogo bias/sudadera3.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="p-panel-card" data-category="sudaderas">
+                    <div class="badge-sale">Oferta</div>
+                    <div class="p-panel-img square">
+                        <img src="catalogo bias/sudadera4.png" alt="Sudadera Two-Tone">
+                    </div>
+                    <div class="p-panel-info">
+                        <h3>Sudadera Two-Tone</h3>
+                        <p class="price-strike">145.000 Gs</p>
+                        <p class="price-current">115.000 Gs</p>
+                        <button class="btn btn-primary small full-width"
+                            onclick="addToCart('Sudadera Two-Tone', '115.000 Gs', 'catalogo bias/sudadera4.png')">
+                            AÑADIR A BOLSA <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editorial Lookbook (Asymmetrical Grid) -->
+    <section class="section lookbook reveal" id="lookbook">
+        <div class="container">
+            <div class="section-header-minimal">
+                <p class="mono-accent">TEMPORADA 2026 // ESTÉTICA URBANA</p>
+                <h2 class="bold-sans">REGISTRO <span class="text-silver">VISUAL</span></h2>
+            </div>
+            <div class="lookbook-grid-editorial">
+                <div class="lb-box lb-tall">
+                    <img src="catalogo bias/abrigo2.png" alt="Editorial Look 1">
+                    <div class="lb-overlay"><span>01 // ESTRUCTURA</span></div>
+                </div>
+                <div class="lb-box lb-wide">
+                    <img src="catalogo bias/jeen2.png" alt="Editorial Look 2">
+                    <div class="lb-overlay"><span>02 // TEXTURA</span></div>
+                </div>
+                <div class="lb-box">
+                    <img src="catalogo bias/sudadera2.png" alt="Editorial Look 3">
+                    <div class="lb-overlay"><span>03 // FORMA</span></div>
+                </div>
+                <div class="lb-box">
+                    <img src="catalogo bias/abrigo3.png" alt="Editorial Look 4">
+                    <div class="lb-overlay"><span>04 // DETALLE</span></div>
+                </div>
+                <div class="lb-box lb-wide">
+                    <img src="catalogo bias/jeen3.png" alt="Editorial Look 5">
+                    <div class="lb-overlay"><span>05 // MOVIMIENTO</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Vision Sections (Zigzag) -->
+    <section class="split-feature-section reveal" id="nosotros">
+        <!-- Mission -->
+        <div class="split-feature">
+            <div class="sf-content">
+                <div class="sf-inner">
+                    <h2 class="sf-title">Nuestra Misión</h2>
+                    <p class="sf-text">
+                        Combinamos diseño y funcionalidad para ofrecerte piezas que resalten tu identidad. Cada detalle
+                        está pensado para quienes buscan estilo sin esfuerzo.
+                    </p>
+                    <a href="#" class="btn-outline-minimal">Saber Más</a>
+                </div>
+            </div>
+            <div class="sf-image">
+                <img src="catalogo bias/abrigoi.png" alt="Nuestra Misión">
+            </div>
+        </div>
+
+        <!-- Vision -->
+        <div class="split-feature sf-reverse">
+            <div class="sf-content">
+                <div class="sf-inner">
+                    <h2 class="sf-title">Nuestra Visión</h2>
+                    <p class="sf-text">
+                        Buscamos elevar el streetwear a un nuevo estándar de sofisticación, siendo la marca referente
+                        para el disruptor moderno que redefine lo cotidiano.
+                    </p>
+                    <a href="#" class="btn-outline-minimal">Saber Más</a>
+                </div>
+            </div>
+            <div class="sf-image">
+                <img src="catalogo bias/abrigo3.png" alt="Nuestra Visión">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section (Refined Grid) -->
+    <section class="section categories reveal" id="categorias">
+        <div class="container">
+            <div class="section-header-minimal">
+                <p class="mono-accent">ESENCIALES // 2026</p>
+                <h2 class="bold-sans">CATEGORÍAS</h2>
+            </div>
+            <div class="category-grid-v2">
+                <div class="category-card large">
+                    <img src="catalogo bias/sudadera4.png" alt="Conjuntos">
+                    <div class="category-v2-info">
+                        <h3>CONJUNTOS</h3>
+                        <a href="#productos" class="link-minimal">DESCUBRIR <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="catalogo bias/pantalon.png" alt="Pantalones">
+                    <div class="category-v2-info">
+                        <h3>PANTALONES</h3>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="catalogo bias/abrigo2.png" alt="Nuevos Ingresos">
+                    <div class="category-v2-info">
+                        <h3>EXTERIORES</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lookbook Section (Editorial Grid) -->
+    <section class="section lookbook reveal">
+        <div class="container">
+            <div class="section-header-minimal">
+                <p class="mono-accent">EDITORIAL // LOOKBOOK</p>
+                <h2 class="bold-sans">REGISTRO <span class="text-silver">VISUAL</span></h2>
+            </div>
+            <div class="lookbook-grid-v2">
+                <div class="lookbook-panel">
+                    <img src="catalogo bias/abrigo3.png" alt="Lookbook 1">
+                </div>
+                <div class="lookbook-panel tall">
+                    <img src="catalogo bias/jeen3.png" alt="Lookbook 2">
+                </div>
+                <div class="lookbook-panel">
+                    <img src="catalogo bias/pantalon4.png" alt="Lookbook 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Contact Form -->
+    <section class="section contact" id="contacto">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-info">
+                    <h2 class="section-title">¿Listo para un <span>Cambio?</span></h2>
+                    <p>Déjanos tus datos o el producto que te interesa y nos pondremos en contacto contigo de inmediato.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/biastorepyy" target="_blank" class="social-icon"><i
+                                data-lucide="instagram"></i></a>
+                        <a href="https://wa.me/595985856487" target="_blank" class="social-icon"><i
+                                data-lucide="phone"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="whatsappForm">
+                    <div class="form-group">
+                        <label>Nombre completo</label>
+                        <input type="text" id="userName" placeholder="Ej: Mathias Gomez" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Producto de interés</label>
+                        <input type="text" id="productName" placeholder="Ej: Oversized Hoodie">
+                    </div>
+                    <div class="form-group">
+                        <label>Mensaje (Medida, color, etc)</label>
+                        <textarea id="userMessage" rows="4" placeholder="Cuéntanos qué necesitas..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">
+                        Pedir por WhatsApp <i data-lucide="send"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Footer -->
+    <footer class="insta-footer">
+        <div class="container footer-flex">
+            <div class="footer-left">
+                <a href="https://www.instagram.com/biastorepyy" target="_blank" class="social-icon"><i
+                        data-lucide="instagram"></i></a>
+                <a href="https://wa.me/595985856487" target="_blank" class="social-icon"><i data-lucide="phone"></i></a>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-utility-links">
+                    <li><a href="#">CONTACTO</a></li>
+                    <li><a href="#">TÉRMINOS</a></li>
+                    <li><a href="#">ENVÍOS</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/595985856487" class="floating-wa" target="_blank">
+        <i data-lucide="phone"></i>
+        <span>Chat Directo</span>
+    </a>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <button class="close-search"><i data-lucide="x"></i></button>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="BUSCAR PRODUCTOS..." autofocus>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- Cart Drawer (Shopping Bag) -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>TU SELECCIÓN</h3>
+            <button class="close-cart"><i data-lucide="x"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Items will be injected here -->
+            <p class="empty-msg">Tu bolsa está vacía</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>TOTAL ESTIMADO</span>
+                <span id="cartTotalAmount">0 Gs.</span>
+            </div>
+            <button class="btn btn-primary full-width" id="checkoutBtn">
+                PEDIR POR WHATSAPP <i data-lucide="send"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Size Guide Modal Overlay -->
+    <div class="modal-overlay" id="sizeGuideModal">
+        <div class="modal-content">
+            <button class="close-modal"><i data-lucide="x"></i></button>
+            <div class="modal-header">
+                <p class="mono">DETALLES DE CALCE</p>
+                <h2 class="bold-sans">GUÍA DE TALLES</h2>
+            </div>
+            <div class="size-table-container">
+                <table class="size-table">
+                    <thead>
+                        <tr>
+                            <th>Talle</th>
+                            <th>Pecho (cm)</th>
+                            <th>Largo (cm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>S</td>
+                            <td>58</td>
+                            <td>70</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td>60</td>
+                            <td>72</td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td>62</td>
+                            <td>74</td>
+                        </tr>
+                        <tr>
+                            <td>XL</td>
+                            <td>64</td>
+                            <td>76</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="modal-note">Nuestro calce es <span class="accent">Oversized</span>. Recomendamos tu talle habitual
+                para un look holgado.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
