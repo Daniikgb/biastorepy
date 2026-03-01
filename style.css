@@ -33,13 +33,20 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     background-color: var(--bg-obsidian);
     color: var(--text-pure);
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
     overflow-x: hidden;
+    width: 100%;
     -webkit-font-smoothing: antialiased;
+    touch-action: pan-y;
 }
 
 .nav-links li a.nav-download-btn {

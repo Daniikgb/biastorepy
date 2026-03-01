@@ -1,3 +1,15 @@
+// Ensure page starts at top on load
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
+
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+window.scrollTo(0, 0);
+
+// Rest of the script
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Init Lucide Icons
     lucide.createIcons();
